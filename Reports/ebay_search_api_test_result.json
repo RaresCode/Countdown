@@ -1,0 +1,1773 @@
+{
+	"id": "b999c536-f2c7-4218-b2d1-235975e947d5",
+	"name": "Ebay Search API",
+	"timestamp": "2023-02-19T22:33:16.810Z",
+	"collection_id": "25847669-71ea74f2-d0da-4d91-bd09-c1cef7b33c1a",
+	"folder_id": 0,
+	"environment_id": "25847669-404211c2-0abe-4d84-addd-e16c19a966d7",
+	"totalPass": 221,
+	"delay": "15000",
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-02-19T22:27:50.506Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "52274183-0da3-4789-bbe8-e2686294f7c0",
+			"name": "Search Item: Iphone",
+			"url": "https://countdown4.p.rapidapi.com/request?type=search&ebay_domain=ebay.com&search_term=iphone&listing_type=auction&condition=used&page=1",
+			"time": 4935,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate all condition fields match that of the condition_used collection variable": true,
+				"Validate all link fields are not empty": true,
+				"Validate all sponsored fields are not empty": true,
+				"Validate all is_auction fields are not empty": true,
+				"Validate all free_returns fields are not empty": true,
+				"Validate all title fields are not empty": true,
+				"Validate all image fields are not empty": true,
+				"Validate all condition fields are not empty": true,
+				"Validate all position fields are not empty and the value is greater than 0": true,
+				"Validate all buy_it_now fields are not empty": true,
+				"Validate all epid fields are not empty": true,
+				"Validate all price fields are higher than 0": true,
+				"Validate page is set to the same as in query params": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate every item is on the ebay": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all condition fields match that of the condition_used collection variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all link fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all sponsored fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all is_auction fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all free_returns fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all title fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all image fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all condition fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all position fields are not empty and the value is greater than 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all buy_it_now fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all epid fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all price fields are higher than 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate page is set to the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate every item is on the ebay": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4935
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate all condition fields match that of the condition_used collection variable": true,
+					"Validate all link fields are not empty": true,
+					"Validate all sponsored fields are not empty": true,
+					"Validate all is_auction fields are not empty": true,
+					"Validate all free_returns fields are not empty": true,
+					"Validate all title fields are not empty": true,
+					"Validate all image fields are not empty": true,
+					"Validate all condition fields are not empty": true,
+					"Validate all position fields are not empty and the value is greater than 0": true,
+					"Validate all buy_it_now fields are not empty": true,
+					"Validate all epid fields are not empty": true,
+					"Validate all price fields are higher than 0": true,
+					"Validate page is set to the same as in query params": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate every item is on the ebay": true
+				}
+			]
+		},
+		{
+			"id": "01899500-c7d6-4038-9bed-525f906ab2b0",
+			"name": "Search Product: Iphone",
+			"url": "https://countdown4.p.rapidapi.com/request?type=product&ebay_domain=ebay.com&epid=385422493838",
+			"time": 1784,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate epid is the same as in query parameters": true,
+				"Validate price field matches the one from the search endpoint": true,
+				"Validate condition field matches the one from the search endpoint": true,
+				"Validate title field matches the one from the search endpoint": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate epid is the same as in query parameters": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate price field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate condition field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate title field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1784
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate epid is the same as in query parameters": true,
+					"Validate price field matches the one from the search endpoint": true,
+					"Validate condition field matches the one from the search endpoint": true,
+					"Validate title field matches the one from the search endpoint": true
+				}
+			]
+		},
+		{
+			"id": "74bdce65-6398-4cf6-8871-cdabff592a71",
+			"name": "Seller Profile: Iphone",
+			"url": "https://countdown4.p.rapidapi.com/request?type=seller_profile&ebay_domain=ebay.com&seller_name=alltechwholesale",
+			"time": 9739,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate seller name is the same as in query parameters": true,
+				"Validate seller link field includes ebay domain": true,
+				"Validate member since field is not empty": true,
+				"Validate location field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate seller name is the same as in query parameters": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate seller link field includes ebay domain": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate member since field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate location field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9739
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate seller name is the same as in query parameters": true,
+					"Validate seller link field includes ebay domain": true,
+					"Validate member since field is not empty": true,
+					"Validate location field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "ae0f0b08-8a46-4810-9808-d06b80abaf8a",
+			"name": "Search Item: Watch",
+			"url": "https://countdown4.p.rapidapi.com/request?type=search&ebay_domain=ebay.com&search_term=watch&listing_type=buy_it_now&condition=open_box&page=2",
+			"time": 3912,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate all condition fields match that of the condition_open_box collection variable": true,
+				"Validate all link fields are not empty": true,
+				"Validate all sponsored fields are not empty": true,
+				"Validate all is_auction fields are not empty": true,
+				"Validate all free_returns fields are not empty": true,
+				"Validate all title fields are not empty": true,
+				"Validate all image fields are not empty": true,
+				"Validate all condition fields are not empty": true,
+				"Validate all position fields are not empty and the value is greater than 0": true,
+				"Validate all buy_it_now fields are not empty": true,
+				"Validate all epid fields are not empty": true,
+				"Validate all price fields are higher than 0": true,
+				"Validate page is set to the same as in query params": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate every item is on the ebay": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all condition fields match that of the condition_open_box collection variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all link fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all sponsored fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all is_auction fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all free_returns fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all title fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all image fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all condition fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all position fields are not empty and the value is greater than 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all buy_it_now fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all epid fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all price fields are higher than 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate page is set to the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate every item is on the ebay": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3912
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate all condition fields match that of the condition_open_box collection variable": true,
+					"Validate all link fields are not empty": true,
+					"Validate all sponsored fields are not empty": true,
+					"Validate all is_auction fields are not empty": true,
+					"Validate all free_returns fields are not empty": true,
+					"Validate all title fields are not empty": true,
+					"Validate all image fields are not empty": true,
+					"Validate all condition fields are not empty": true,
+					"Validate all position fields are not empty and the value is greater than 0": true,
+					"Validate all buy_it_now fields are not empty": true,
+					"Validate all epid fields are not empty": true,
+					"Validate all price fields are higher than 0": true,
+					"Validate page is set to the same as in query params": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate every item is on the ebay": true
+				}
+			]
+		},
+		{
+			"id": "566982c5-3fa5-46a3-a56a-e41d1a942e76",
+			"name": "Search Product: Watch",
+			"url": "https://countdown4.p.rapidapi.com/request?type=product&ebay_domain=ebay.com&epid=292194363171",
+			"time": 6407,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate epid is the same as in query parameters": true,
+				"Validate price field matches the one from the search endpoint": true,
+				"Validate condition field matches the one from the search endpoint": true,
+				"Validate title field matches the one from the search endpoint": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate epid is the same as in query parameters": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate price field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate condition field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate title field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6407
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate epid is the same as in query parameters": true,
+					"Validate price field matches the one from the search endpoint": true,
+					"Validate condition field matches the one from the search endpoint": true,
+					"Validate title field matches the one from the search endpoint": true
+				}
+			]
+		},
+		{
+			"id": "70e4e10e-33ba-4a1e-a47d-c07e38ec9659",
+			"name": "Seller Profile: Watch",
+			"url": "https://countdown4.p.rapidapi.com/request?type=seller_profile&ebay_domain=ebay.com&seller_name=bestseller2046",
+			"time": 10422,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate seller name is the same as in query parameters": true,
+				"Validate seller link field includes ebay domain": true,
+				"Validate member since field is not empty": true,
+				"Validate location field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate seller name is the same as in query parameters": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate seller link field includes ebay domain": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate member since field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate location field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10422
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate seller name is the same as in query parameters": true,
+					"Validate seller link field includes ebay domain": true,
+					"Validate member since field is not empty": true,
+					"Validate location field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "e0d1715d-b14d-433a-a124-981b3f0e5e3c",
+			"name": "Search Item: Laptop",
+			"url": "https://countdown4.p.rapidapi.com/request?type=search&ebay_domain=ebay.com&search_term=laptop&listing_type=buy_it_now&condition=seller_refurbished&page=2",
+			"time": 3464,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate all condition fields match that of the condition_refurbished collection variable": true,
+				"Validate all link fields are not empty": true,
+				"Validate all sponsored fields are not empty": true,
+				"Validate all is_auction fields are not empty": true,
+				"Validate all free_returns fields are not empty": true,
+				"Validate all title fields are not empty": true,
+				"Validate all image fields are not empty": true,
+				"Validate all condition fields are not empty": true,
+				"Validate all position fields are not empty and the value is greater than 0": true,
+				"Validate all buy_it_now fields are not empty": true,
+				"Validate all epid fields are not empty": true,
+				"Validate all price fields are higher than 0": true,
+				"Validate page is set to the same as in query params": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate every item is on the ebay": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all condition fields match that of the condition_refurbished collection variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all link fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all sponsored fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all is_auction fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all free_returns fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all title fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all image fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all condition fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all position fields are not empty and the value is greater than 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all buy_it_now fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all epid fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all price fields are higher than 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate page is set to the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate every item is on the ebay": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3464
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate all condition fields match that of the condition_refurbished collection variable": true,
+					"Validate all link fields are not empty": true,
+					"Validate all sponsored fields are not empty": true,
+					"Validate all is_auction fields are not empty": true,
+					"Validate all free_returns fields are not empty": true,
+					"Validate all title fields are not empty": true,
+					"Validate all image fields are not empty": true,
+					"Validate all condition fields are not empty": true,
+					"Validate all position fields are not empty and the value is greater than 0": true,
+					"Validate all buy_it_now fields are not empty": true,
+					"Validate all epid fields are not empty": true,
+					"Validate all price fields are higher than 0": true,
+					"Validate page is set to the same as in query params": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate every item is on the ebay": true
+				}
+			]
+		},
+		{
+			"id": "142077dd-5e44-40af-b1ed-da54f8b65e52",
+			"name": "Search Product: Laptop",
+			"url": "https://countdown4.p.rapidapi.com/request?type=product&ebay_domain=ebay.com&epid=225227159141",
+			"time": 2853,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate epid is the same as in query parameters": true,
+				"Validate price field matches the one from the search endpoint": true,
+				"Validate condition field matches the one from the search endpoint": true,
+				"Validate title field matches the one from the search endpoint": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate epid is the same as in query parameters": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate price field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate condition field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate title field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2853
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate epid is the same as in query parameters": true,
+					"Validate price field matches the one from the search endpoint": true,
+					"Validate condition field matches the one from the search endpoint": true,
+					"Validate title field matches the one from the search endpoint": true
+				}
+			]
+		},
+		{
+			"id": "4bb4f5c4-0e5d-45c4-88b6-18eaab7cb79d",
+			"name": "Seller Profile: Laptop",
+			"url": "https://countdown4.p.rapidapi.com/request?type=seller_profile&ebay_domain=ebay.com&seller_name=kl0",
+			"time": 2733,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate seller name is the same as in query parameters": true,
+				"Validate seller link field includes ebay domain": true,
+				"Validate member since field is not empty": true,
+				"Validate location field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate seller name is the same as in query parameters": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate seller link field includes ebay domain": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate member since field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate location field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2733
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate seller name is the same as in query parameters": true,
+					"Validate seller link field includes ebay domain": true,
+					"Validate member since field is not empty": true,
+					"Validate location field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "026accbd-2d40-4cae-bce6-88399caab6c5",
+			"name": "Search Item: Shoes",
+			"url": "https://countdown4.p.rapidapi.com/request?type=search&ebay_domain=ebay.com&search_term=shoes&listing_type=buy_it_now&condition=new&page=3",
+			"time": 5635,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate all condition fields match that of the condition_new collection variable": true,
+				"Validate all link fields are not empty": true,
+				"Validate all sponsored fields are not empty": true,
+				"Validate all is_auction fields are not empty": true,
+				"Validate all free_returns fields are not empty": true,
+				"Validate all title fields are not empty": true,
+				"Validate all image fields are not empty": true,
+				"Validate all condition fields are not empty": true,
+				"Validate all position fields are not empty and the value is greater than 0": true,
+				"Validate all buy_it_now fields are not empty": true,
+				"Validate all epid fields are not empty": true,
+				"Validate all price fields are higher than 0": true,
+				"Validate page is set to the same as in query params": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate every item is on the ebay": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all condition fields match that of the condition_new collection variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all link fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all sponsored fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all is_auction fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all free_returns fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all title fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all image fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all condition fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all position fields are not empty and the value is greater than 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all buy_it_now fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all epid fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all price fields are higher than 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate page is set to the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate every item is on the ebay": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5635
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate all condition fields match that of the condition_new collection variable": true,
+					"Validate all link fields are not empty": true,
+					"Validate all sponsored fields are not empty": true,
+					"Validate all is_auction fields are not empty": true,
+					"Validate all free_returns fields are not empty": true,
+					"Validate all title fields are not empty": true,
+					"Validate all image fields are not empty": true,
+					"Validate all condition fields are not empty": true,
+					"Validate all position fields are not empty and the value is greater than 0": true,
+					"Validate all buy_it_now fields are not empty": true,
+					"Validate all epid fields are not empty": true,
+					"Validate all price fields are higher than 0": true,
+					"Validate page is set to the same as in query params": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate every item is on the ebay": true
+				}
+			]
+		},
+		{
+			"id": "3aed0fce-7120-46f5-9e39-87c21bd2451b",
+			"name": "Search Product: Shoes",
+			"url": "https://countdown4.p.rapidapi.com/request?type=product&ebay_domain=ebay.com&epid=354152836241",
+			"time": 1982,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate epid is the same as in query parameters": true,
+				"Validate price field matches the one from the search endpoint": true,
+				"Validate condition field matches the one from the search endpoint": true,
+				"Validate title field matches the one from the search endpoint": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate epid is the same as in query parameters": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate price field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate condition field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate title field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1982
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate epid is the same as in query parameters": true,
+					"Validate price field matches the one from the search endpoint": true,
+					"Validate condition field matches the one from the search endpoint": true,
+					"Validate title field matches the one from the search endpoint": true
+				}
+			]
+		},
+		{
+			"id": "288a0ddb-7e9a-49cf-b16e-7fb310194cf9",
+			"name": "Seller Profile: Shoes",
+			"url": "https://countdown4.p.rapidapi.com/request?type=seller_profile&ebay_domain=ebay.com&seller_name=ranhon_48",
+			"time": 2708,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate seller name is the same as in query parameters": true,
+				"Validate seller link field includes ebay domain": true,
+				"Validate member since field is not empty": true,
+				"Validate location field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate seller name is the same as in query parameters": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate seller link field includes ebay domain": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate member since field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate location field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2708
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate seller name is the same as in query parameters": true,
+					"Validate seller link field includes ebay domain": true,
+					"Validate member since field is not empty": true,
+					"Validate location field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "9c928e55-5ce1-4807-8abb-0b2a76358cd9",
+			"name": "Search Item: Tv",
+			"url": "https://countdown4.p.rapidapi.com/request?type=search&ebay_domain=ebay.com&search_term=tv&listing_type=auction&condition=used&page=1",
+			"time": 3557,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate all condition fields match that of the condition_used collection variable": true,
+				"Validate all link fields are not empty": true,
+				"Validate all sponsored fields are not empty": true,
+				"Validate all is_auction fields are not empty": true,
+				"Validate all free_returns fields are not empty": true,
+				"Validate all title fields are not empty": true,
+				"Validate all image fields are not empty": true,
+				"Validate all condition fields are not empty": true,
+				"Validate all position fields are not empty and the value is greater than 0": true,
+				"Validate all buy_it_now fields are not empty": true,
+				"Validate all epid fields are not empty": true,
+				"Validate all price fields are higher than 0": true,
+				"Validate page is set to the same as in query params": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate every item is on the ebay": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all condition fields match that of the condition_used collection variable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all link fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all sponsored fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all is_auction fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all free_returns fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all title fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all image fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all condition fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all position fields are not empty and the value is greater than 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all buy_it_now fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all epid fields are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate all price fields are higher than 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate page is set to the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate every item is on the ebay": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3557
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate all condition fields match that of the condition_used collection variable": true,
+					"Validate all link fields are not empty": true,
+					"Validate all sponsored fields are not empty": true,
+					"Validate all is_auction fields are not empty": true,
+					"Validate all free_returns fields are not empty": true,
+					"Validate all title fields are not empty": true,
+					"Validate all image fields are not empty": true,
+					"Validate all condition fields are not empty": true,
+					"Validate all position fields are not empty and the value is greater than 0": true,
+					"Validate all buy_it_now fields are not empty": true,
+					"Validate all epid fields are not empty": true,
+					"Validate all price fields are higher than 0": true,
+					"Validate page is set to the same as in query params": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate every item is on the ebay": true
+				}
+			]
+		},
+		{
+			"id": "bc4af0a0-d7db-40f9-aba7-dcfe1aecc75c",
+			"name": "Search Product: Tv",
+			"url": "https://countdown4.p.rapidapi.com/request?type=product&ebay_domain=ebay.com&epid=125780756307",
+			"time": 2098,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate epid is the same as in query parameters": true,
+				"Validate price field matches the one from the search endpoint": true,
+				"Validate condition field matches the one from the search endpoint": true,
+				"Validate title field matches the one from the search endpoint": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate epid is the same as in query parameters": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate price field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate condition field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate title field matches the one from the search endpoint": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2098
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate epid is the same as in query parameters": true,
+					"Validate price field matches the one from the search endpoint": true,
+					"Validate condition field matches the one from the search endpoint": true,
+					"Validate title field matches the one from the search endpoint": true
+				}
+			]
+		},
+		{
+			"id": "e9bc2c1f-aad7-4cfe-a62a-3162a64bdef6",
+			"name": "Seller Profile: Tv",
+			"url": "https://countdown4.p.rapidapi.com/request?type=seller_profile&ebay_domain=ebay.com&seller_name=brahes61",
+			"time": 2227,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate seller name is the same as in query parameters": true,
+				"Validate seller link field includes ebay domain": true,
+				"Validate member since field is not empty": true,
+				"Validate location field is not empty": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate seller name is the same as in query parameters": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate seller link field includes ebay domain": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate member since field is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate location field is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2227
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate seller name is the same as in query parameters": true,
+					"Validate seller link field includes ebay domain": true,
+					"Validate member since field is not empty": true,
+					"Validate location field is not empty": true
+				}
+			]
+		},
+		{
+			"id": "9f306774-b2ef-4d1d-8c78-c5caea7766cd",
+			"name": "Deals",
+			"url": "https://countdown4.p.rapidapi.com/request?type=deals&url=https%3A%2F%2Fwww.ebay.com%2Fdeals&page=2",
+			"time": 2383,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate search type is the same as in query params": true,
+				"Validate page is the same as in query params": true,
+				"Validate link fields in deals results are on ebay": true,
+				"Validate link fields in deals results are trending deals": true,
+				"Validate title fields in deals results are not empty": true,
+				"Validate epid fields in deals results are not empty": true,
+				"Validate image fields in deals results are not empty": true,
+				"Validate position fields in deals results are not empty": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate page is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate link fields in deals results are on ebay": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate link fields in deals results are trending deals": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate title fields in deals results are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate epid fields in deals results are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate image fields in deals results are not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate position fields in deals results are not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2383
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate search type is the same as in query params": true,
+					"Validate page is the same as in query params": true,
+					"Validate link fields in deals results are on ebay": true,
+					"Validate link fields in deals results are trending deals": true,
+					"Validate title fields in deals results are not empty": true,
+					"Validate epid fields in deals results are not empty": true,
+					"Validate image fields in deals results are not empty": true,
+					"Validate position fields in deals results are not empty": true
+				}
+			]
+		},
+		{
+			"id": "1311eeeb-000e-43c1-90a7-69958d0b589e",
+			"name": "Autocomplete Search Term",
+			"url": "https://countdown4.p.rapidapi.com/request?type=autocomplete&ebay_domain=ebay.com&search_term=samsung",
+			"time": 1728,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify response is in json format": true,
+				"Verify status code is 200": true,
+				"Verify response time is less than 15 seconds": true,
+				"Verify if host and api key are provided in the request headers": true,
+				"Validate domain is the same as in query params": true,
+				"Validate search type is the same as in query params": true,
+				"Validate search term is the same as in query params": true,
+				"Validate suggestion fields in autocomplete_results category include the search term": true,
+				"Validate type fields in autocomplete_results category has set KEYWORD as type": true
+			},
+			"testPassFailCounts": {
+				"Verify response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify response time is less than 15 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if host and api key are provided in the request headers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate domain is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search type is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate search term is the same as in query params": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate suggestion fields in autocomplete_results category include the search term": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type fields in autocomplete_results category has set KEYWORD as type": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1728
+			],
+			"allTests": [
+				{
+					"Verify response is in json format": true,
+					"Verify status code is 200": true,
+					"Verify response time is less than 15 seconds": true,
+					"Verify if host and api key are provided in the request headers": true,
+					"Validate domain is the same as in query params": true,
+					"Validate search type is the same as in query params": true,
+					"Validate search term is the same as in query params": true,
+					"Validate suggestion fields in autocomplete_results category include the search term": true,
+					"Validate type fields in autocomplete_results category has set KEYWORD as type": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 68567,
+	"collection": {
+		"requests": [
+			{
+				"id": "52274183-0da3-4789-bbe8-e2686294f7c0",
+				"method": "GET"
+			},
+			{
+				"id": "01899500-c7d6-4038-9bed-525f906ab2b0",
+				"method": "GET"
+			},
+			{
+				"id": "74bdce65-6398-4cf6-8871-cdabff592a71",
+				"method": "GET"
+			},
+			{
+				"id": "ae0f0b08-8a46-4810-9808-d06b80abaf8a",
+				"method": "GET"
+			},
+			{
+				"id": "566982c5-3fa5-46a3-a56a-e41d1a942e76",
+				"method": "GET"
+			},
+			{
+				"id": "70e4e10e-33ba-4a1e-a47d-c07e38ec9659",
+				"method": "GET"
+			},
+			{
+				"id": "e0d1715d-b14d-433a-a124-981b3f0e5e3c",
+				"method": "GET"
+			},
+			{
+				"id": "142077dd-5e44-40af-b1ed-da54f8b65e52",
+				"method": "GET"
+			},
+			{
+				"id": "4bb4f5c4-0e5d-45c4-88b6-18eaab7cb79d",
+				"method": "GET"
+			},
+			{
+				"id": "026accbd-2d40-4cae-bce6-88399caab6c5",
+				"method": "GET"
+			},
+			{
+				"id": "3aed0fce-7120-46f5-9e39-87c21bd2451b",
+				"method": "GET"
+			},
+			{
+				"id": "288a0ddb-7e9a-49cf-b16e-7fb310194cf9",
+				"method": "GET"
+			},
+			{
+				"id": "9c928e55-5ce1-4807-8abb-0b2a76358cd9",
+				"method": "GET"
+			},
+			{
+				"id": "bc4af0a0-d7db-40f9-aba7-dcfe1aecc75c",
+				"method": "GET"
+			},
+			{
+				"id": "e9bc2c1f-aad7-4cfe-a62a-3162a64bdef6",
+				"method": "GET"
+			},
+			{
+				"id": "9f306774-b2ef-4d1d-8c78-c5caea7766cd",
+				"method": "GET"
+			},
+			{
+				"id": "1311eeeb-000e-43c1-90a7-69958d0b589e",
+				"method": "GET"
+			}
+		]
+	}
+}

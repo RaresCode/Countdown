@@ -1,0 +1,795 @@
+{
+	"info": {
+		"_postman_id": "b2f7311d-fc00-4c36-b18a-9575a1366545",
+		"name": "Ebay Search API DDT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25847669"
+	},
+	"item": [
+		{
+			"name": "Test Multiple Items",
+			"item": [
+				{
+					"name": "Search Item",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// GET THE JSON RESPONSE\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"// SET THE ITEM CONDITION ACCORDING TO THE QUERY PARAMS \r",
+									"// TO MATCH THE VALIDATION OF THE JSON RESPONSE CONDITION\r",
+									"// AND SET THE CONDITION TO BE USED IN THE NEXT API\r",
+									"\r",
+									"var input_condition = pm.request.url.query.get(\"condition\");\r",
+									"if (input_condition == 'new') {\r",
+									"  var condition = \"Brand New\"\r",
+									"  pm.collectionVariables.set(\"current_condition\", 'New');\r",
+									"\r",
+									"}\r",
+									"if (input_condition == 'used') {\r",
+									"  var condition = \"Pre-Owned\"\r",
+									"  pm.collectionVariables.set(\"current_condition\", 'Used');\r",
+									"\r",
+									"}\r",
+									"if (input_condition == 'open_box') {\r",
+									"  var condition = \"New (Other)\"\r",
+									"  pm.collectionVariables.set(\"current_condition\", 'New without tags');\r",
+									"\r",
+									"}\r",
+									"if (input_condition == 'seller_refurbished') {\r",
+									"  var condition = \"Refurbished\"\r",
+									"  pm.collectionVariables.set(\"current_condition\", 'Seller refurbished');\r",
+									"\r",
+									"}\r",
+									"\r",
+									"\r",
+									"// RESPONSE VALIDATIONS\r",
+									"\r",
+									"pm.test(\"Verify response is in json format\", function () {\r",
+									"    pm.expect(jsonData).to.not.be.empty;\r",
+									"    pm.expect(jsonData).to.be.an('object');\r",
+									"    pm.expect(pm.response.headers.get('content-type')).to.include('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response time is less than 15 seconds\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(15000);\r",
+									"});\r",
+									"\r",
+									"// REQUEST HEADERS VALIDATION\r",
+									"\r",
+									"pm.test(\"Verify if host and api key are provided in the request headers\", function () {\r",
+									"    pm.expect(pm.request.headers.get('x-rapidapi-host')).to.not.be.empty;\r",
+									"    pm.expect(pm.request.headers.get('x-rapidapi-key')).to.not.be.empty;\r",
+									"});\r",
+									"\r",
+									"// RESPONSE CONTENT VALIDATIONS\r",
+									"\r",
+									"pm.test(\"Validate all condition fields match that of the input\", function () {\r",
+									"    for (var i = 0; i < jsonData.search_results.length; i++) {\r",
+									"        pm.expect(jsonData.search_results[i].condition).to.equal(condition);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate all link fields are not empty\", function () {\r",
+									"    for (var i = 0; i < jsonData.search_results.length; i++) {\r",
+									"        pm.expect(jsonData.search_results[i].link).to.not.be.empty;\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate all sponsored fields are not empty\", function () {\r",
+									"    for (var i = 0; i < jsonData.search_results.length; i++) {\r",
+									"        pm.expect(jsonData.search_results[i].sponsored).to.be.oneOf([false, true])\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate all is_auction fields are not empty\", function () {\r",
+									"    for (var i = 0; i < jsonData.search_results.length; i++) {\r",
+									"        pm.expect(jsonData.search_results[i].is_auction).to.be.oneOf([false, true])\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate all free_returns fields are not empty\", function () {\r",
+									"    for (var i = 0; i < jsonData.search_results.length; i++) {\r",
+									"        pm.expect(jsonData.search_results[i].free_returns).to.be.oneOf([false, true])\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate all title fields are not empty\", function () {\r",
+									"    for (var i = 0; i < jsonData.search_results.length; i++) {\r",
+									"        pm.expect(jsonData.search_results[i].title).to.not.be.empty;\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate all image fields are not empty\", function () {\r",
+									"    for (var i = 0; i < jsonData.search_results.length; i++) {\r",
+									"        pm.expect(jsonData.search_results[i].image).to.not.be.empty;\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate all condition fields are not empty\", function () {\r",
+									"    for (var i = 0; i < jsonData.search_results.length; i++) {\r",
+									"        pm.expect(jsonData.search_results[i].condition).to.not.be.empty;\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate all position fields are not empty and the value is greater than 0\", function () {\r",
+									"    for (var i = 0; i < jsonData.search_results.length; i++) {\r",
+									"        pm.expect(jsonData.search_results[i].position).to.be.greaterThan(0);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate all buy_it_now fields are not empty\", function () {\r",
+									"    for (var i = 0; i < jsonData.search_results.length; i++) {\r",
+									"        pm.expect(jsonData.search_results[i].buy_it_now).to.be.oneOf([false, true])\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate all epid fields are not empty\", function () {\r",
+									"    for (var i = 0; i < jsonData.search_results.length; i++) {\r",
+									"        pm.expect(jsonData.search_results[i].epid).to.not.be.empty;\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate all price fields are higher than 0\", function () {\r",
+									"    for (var i = 0; i < jsonData.search_results.length; i++) {\r",
+									"        pm.expect(jsonData.search_results[i].price.value).to.be.greaterThan(0);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"// QUERY PARAMS VALIDATIONS\r",
+									"\r",
+									"pm.test(\"Validate page is set to the same as in query params\", function () {\r",
+									"    var page_number = pm.request.url.query.get(\"page\");\r",
+									"    pm.expect(parseInt(jsonData.pagination.current_page)).to.eql(parseInt(page_number));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate domain is the same as in query params\", function () {\r",
+									"    var domain_name = pm.request.url.query.get(\"ebay_domain\");\r",
+									"    pm.expect(jsonData.request_parameters.ebay_domain).to.eql(domain_name);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate search type is the same as in query params\", function () {\r",
+									"    var search_type = pm.request.url.query.get(\"type\");\r",
+									"    pm.expect(jsonData.request_parameters.type).to.eql(search_type);\r",
+									"});\r",
+									"\r",
+									"pm.test(`Validate every item is on the ebay`, function () {\r",
+									"    var domain_name = pm.request.url.query.get(\"ebay_domain\");\r",
+									"    for (var i = 0; i < jsonData.search_results.length; i++) {\r",
+									"        pm.expect(jsonData.search_results[i].link).to.include(domain_name);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"// SET THE VARIABLES AND RUN THE NEXT API ENDPOINT\r",
+									"\r",
+									"pm.collectionVariables.set(\"epid\", jsonData.search_results[1].epid);\r",
+									"pm.collectionVariables.set(\"price\", jsonData.search_results[1].price.value);\r",
+									"pm.collectionVariables.set(\"title\", jsonData.search_results[1].title);\r",
+									"pm.collectionVariables.set(\"is_auction\", jsonData.search_results[1].is_auction);\r",
+									"postman.setNextRequest(\"Search Product\");\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "{{API_HOST}}",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.8",
+								"type": "text"
+							},
+							{
+								"key": "cache-control",
+								"value": "no-cache",
+								"type": "text"
+							},
+							{
+								"key": "expires",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "origin",
+								"value": "https://rapidapi.com",
+								"type": "text"
+							},
+							{
+								"key": "pragma",
+								"value": "no-cache",
+								"type": "text"
+							},
+							{
+								"key": "referer",
+								"value": "https://rapidapi.com/",
+								"type": "text"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty",
+								"type": "text"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors",
+								"type": "text"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site",
+								"type": "text"
+							},
+							{
+								"key": "sec-gpc",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "usequerystring",
+								"value": "true",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+								"type": "text"
+							},
+							{
+								"key": "x-rapidapi-host",
+								"value": "{{API_HOST}}",
+								"type": "text"
+							},
+							{
+								"key": "x-rapidapi-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-rapidapi-ua",
+								"value": "RapidAPI-Playground",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/request?type=search&ebay_domain=ebay.com&search_term={{search_term}}&listing_type={{listing_type}}&condition={{item_condition}}&page={{page}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"request"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "search"
+								},
+								{
+									"key": "ebay_domain",
+									"value": "ebay.com"
+								},
+								{
+									"key": "search_term",
+									"value": "{{search_term}}"
+								},
+								{
+									"key": "listing_type",
+									"value": "{{listing_type}}"
+								},
+								{
+									"key": "condition",
+									"value": "{{item_condition}}"
+								},
+								{
+									"key": "page",
+									"value": "{{page}}"
+								},
+								{
+									"key": "sold_items",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "authorized_sellers",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "returns_accepted",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "free_returns",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// GET THE JSON RESPONSE\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"// RESPONSE VALIDATIONS\r",
+									"\r",
+									"pm.test(\"Verify response is in json format\", function () {\r",
+									"    pm.expect(jsonData).to.not.be.empty;\r",
+									"    pm.expect(jsonData).to.be.an('object');\r",
+									"    pm.expect(pm.response.headers.get('content-type')).to.include('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response time is less than 15 seconds\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(15000);\r",
+									"});\r",
+									"\r",
+									"// REQUEST HEADERS VALIDATION\r",
+									"\r",
+									"pm.test(\"Verify if host and api key are provided in the request headers\", function () {\r",
+									"    pm.expect(pm.request.headers.get('x-rapidapi-host')).to.not.be.empty;\r",
+									"    pm.expect(pm.request.headers.get('x-rapidapi-key')).to.not.be.empty;\r",
+									"});\r",
+									"\r",
+									"// QUERY PARAMS VALIDATIONS\r",
+									"\r",
+									"pm.test(\"Validate domain is the same as in query params\", function () {\r",
+									"    var domain_name = pm.request.url.query.get(\"ebay_domain\");\r",
+									"    pm.expect(jsonData.request_parameters.ebay_domain).to.eql(domain_name);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate search type is the same as in query params\", function () {\r",
+									"    var search_type = pm.request.url.query.get(\"type\");\r",
+									"    pm.expect(jsonData.request_parameters.type).to.eql(search_type);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate epid is the same as in query parameters\", function () {\r",
+									"    var epid = pm.request.url.query.get(\"epid\");\r",
+									"    pm.expect(jsonData.request_parameters.epid).to.equal(epid);\r",
+									"    pm.expect(jsonData.product.epid).to.equal(epid);\r",
+									"});\r",
+									"\r",
+									"// RESPONSE CONTENT VALIDATIONS\r",
+									"\r",
+									"pm.test(\"Validate price field matches the one from the search endpoint\", function () {\r",
+									"    var price_field = pm.collectionVariables.get(\"price\");\r",
+									"    var price_found = false;\r",
+									"\r",
+									"    try {\r",
+									"        if (jsonData.product.variants) {\r",
+									"            for (var i = 0; i < jsonData.product.variants.length; i++) {\r",
+									"                if (jsonData.product.variants[i].price == price_field) {\r",
+									"                    price_found = true;\r",
+									"                    break;\r",
+									"                }\r",
+									"            }\r",
+									"        } else if (jsonData.offer.price == price_field) {\r",
+									"            price_found = true;\r",
+									"        }\r",
+									"    } catch (error) {\r",
+									"        throw error;\r",
+									"    }\r",
+									"\r",
+									"    pm.expect(price_found).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate condition field matches the one from the search endpoint\", function () {\r",
+									"    var condition_field = pm.collectionVariables.get(\"current_condition\");\r",
+									"    pm.expect(jsonData.condition.raw.startsWith(condition_field)).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate title field matches the one from the search endpoint\", function () {\r",
+									"    var title_field = pm.collectionVariables.get(\"title\");\r",
+									"    pm.expect(jsonData.product.title).to.equal(title_field);\r",
+									"});\r",
+									"\r",
+									"// SET THE VARIABLES AND RUN THE NEXT API ENDPOINT\r",
+									"\r",
+									"pm.collectionVariables.set(\"seller_name\", jsonData.seller.name);\r",
+									"pm.collectionVariables.set(\"seller_url\", jsonData.seller.link);\r",
+									"\r",
+									"postman.setNextRequest(\"Seller Profile\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "{{API_HOST}}",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.8",
+								"type": "text"
+							},
+							{
+								"key": "cache-control",
+								"value": "no-cache",
+								"type": "text"
+							},
+							{
+								"key": "expires",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "origin",
+								"value": "https://rapidapi.com",
+								"type": "text"
+							},
+							{
+								"key": "pragma",
+								"value": "no-cache",
+								"type": "text"
+							},
+							{
+								"key": "referer",
+								"value": "https://rapidapi.com/",
+								"type": "text"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty",
+								"type": "text"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors",
+								"type": "text"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site",
+								"type": "text"
+							},
+							{
+								"key": "sec-gpc",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "usequerystring",
+								"value": "true",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+								"type": "text"
+							},
+							{
+								"key": "x-rapidapi-host",
+								"value": "{{API_HOST}}",
+								"type": "text"
+							},
+							{
+								"key": "x-rapidapi-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-rapidapi-ua",
+								"value": "RapidAPI-Playground",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/request?type=product&ebay_domain=ebay.com&epid={{epid}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"request"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "product"
+								},
+								{
+									"key": "ebay_domain",
+									"value": "ebay.com"
+								},
+								{
+									"key": "epid",
+									"value": "{{epid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Seller Profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// GET THE JSON RESPONSE\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"// RESPONSE VALIDATIONS\r",
+									"\r",
+									"pm.test(\"Verify response is in json format\", function () {\r",
+									"    pm.expect(jsonData).to.not.be.empty;\r",
+									"    pm.expect(jsonData).to.be.an('object');\r",
+									"    pm.expect(pm.response.headers.get('content-type')).to.include('application/json');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response time is less than 15 seconds\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(15000);\r",
+									"});\r",
+									"\r",
+									"// REQUEST HEADERS VALIDATION\r",
+									"\r",
+									"pm.test(\"Verify if host and api key are provided in the request headers\", function () {\r",
+									"    pm.expect(pm.request.headers.get('x-rapidapi-host')).to.not.be.empty;\r",
+									"    pm.expect(pm.request.headers.get('x-rapidapi-key')).to.not.be.empty;\r",
+									"});\r",
+									"\r",
+									"// QUERY PARAMS VALIDATIONS\r",
+									"\r",
+									"pm.test(\"Validate domain is the same as in query params\", function () {\r",
+									"    var domain_name = pm.request.url.query.get(\"ebay_domain\");\r",
+									"    pm.expect(jsonData.request_parameters.ebay_domain).to.eql(domain_name);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate search type is the same as in query params\", function () {\r",
+									"    var search_type = pm.request.url.query.get(\"type\");\r",
+									"    pm.expect(jsonData.request_parameters.type).to.eql(search_type);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate seller name is the same as in query parameters\", function () {\r",
+									"    var seller_name = pm.request.url.query.get(\"seller_name\");\r",
+									"    pm.expect(jsonData.request_parameters.seller_name).to.equal(seller_name);\r",
+									"});\r",
+									"\r",
+									"// RESPONSE CONTENT VALIDATIONS\r",
+									"\r",
+									"pm.test(\"Validate seller link field includes ebay domain\", function () {\r",
+									"    var domain_name = pm.request.url.query.get(\"ebay_domain\");\r",
+									"    pm.expect(jsonData.seller.link.toLowerCase()).to.include(domain_name);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate member since field is not empty\", function () {\r",
+									"    pm.expect(jsonData.seller.member_since).to.not.be.empty;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate location field is not empty\", function () {\r",
+									"    pm.expect(jsonData.seller.location).to.not.be.empty;\r",
+									"});\r",
+									"\r",
+									"postman.setNextRequest(\"null\");\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "{{API_HOST}}",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*",
+								"type": "text"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.8",
+								"type": "text"
+							},
+							{
+								"key": "cache-control",
+								"value": "no-cache",
+								"type": "text"
+							},
+							{
+								"key": "expires",
+								"value": "0",
+								"type": "text"
+							},
+							{
+								"key": "origin",
+								"value": "https://rapidapi.com",
+								"type": "text"
+							},
+							{
+								"key": "pragma",
+								"value": "no-cache",
+								"type": "text"
+							},
+							{
+								"key": "referer",
+								"value": "https://rapidapi.com/",
+								"type": "text"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty",
+								"type": "text"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors",
+								"type": "text"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site",
+								"type": "text"
+							},
+							{
+								"key": "sec-gpc",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "usequerystring",
+								"value": "true",
+								"type": "text"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+								"type": "text"
+							},
+							{
+								"key": "x-rapidapi-host",
+								"value": "{{API_HOST}}",
+								"type": "text"
+							},
+							{
+								"key": "x-rapidapi-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-rapidapi-ua",
+								"value": "RapidAPI-Playground",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/request?type=seller_profile&ebay_domain=ebay.com&seller_name={{seller_name}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"request"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "seller_profile"
+								},
+								{
+									"key": "ebay_domain",
+									"value": "ebay.com"
+								},
+								{
+									"key": "seller_name",
+									"value": "{{seller_name}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "https://countdown4.p.rapidapi.com",
+			"type": "string"
+		},
+		{
+			"key": "epid",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "price",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "current_condition",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "title",
+			"value": ""
+		},
+		{
+			"key": "is_auction",
+			"value": ""
+		},
+		{
+			"key": "seller_name",
+			"value": ""
+		},
+		{
+			"key": "seller_url",
+			"value": ""
+		}
+	]
+}

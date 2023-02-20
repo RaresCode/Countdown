@@ -1,0 +1,32 @@
+[
+  {
+    "search_term": "leggings",
+    "item_condition": "new",
+    "listing_type": "buy_it_now",
+    "page": 1
+  },
+  {
+    "search_term": "backpack",
+    "item_condition": "open_box",
+    "listing_type": "buy_it_now",
+    "page": 1
+  },
+  {
+    "search_term": "phone",
+    "item_condition": "used",
+    "listing_type": "auction",
+    "page": 2
+  },
+  {
+    "search_term": "table",
+    "item_condition": "seller_refurbished",
+    "listing_type": "buy_it_now",
+    "page": 1
+  },
+  {
+    "search_term": "chair",
+    "item_condition": "used",
+    "listing_type": "buy_it_now",
+    "page": 3
+  }
+]
