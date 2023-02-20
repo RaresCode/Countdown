@@ -22,7 +22,7 @@ Countdown API provides various ebay search endpoints for searching items, produc
 
 ## Testing Process
 
-https://user-images.githubusercontent.com/91252395/220154575-d83b4ec8-5cf0-4367-b2c8-ed5d0ea585a4.mp4
+https://user-images.githubusercontent.com/91252395/220158333-f2fc8c6d-0892-4e8d-9734-162db5cb18ff.mp4
 
 ## Test Report
 
