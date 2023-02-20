@@ -22,11 +22,11 @@ Countdown API provides various ebay search endpoints for searching items, produc
 
 ## Testing Process
 
+https://user-images.githubusercontent.com/91252395/220154575-d83b4ec8-5cf0-4367-b2c8-ed5d0ea585a4.mp4
 
 ## Test Report
 
 ![test report photo](https://user-images.githubusercontent.com/91252395/220152826-303461da-f8dc-4f89-b1ff-a13b3878f914.PNG)
-
 
 ## Setup without newman
 
