@@ -1,9 +1,7 @@
 
 # Testing Countdown API
 
-The objective of this project is to thoroughly test the Countdown API, specifically focusing on its various eBay search endpoints. The Countdown API provides functionalities for searching items, retrieving product details, accessing customer reviews, obtaining seller data, exploring deals, and generating item suggestions.
-
-To accomplish this, the project will utilize Postman, a popular API testing tool that allows for efficient testing, automation, and validation of API endpoints. The testing approach will involve API chaining, multiple assertions, and data-driven testing techniques to ensure comprehensive coverage and robust validation of the Countdown API.
+The objective of this project is to thoroughly test the Countdown API, specifically focusing on its various eBay search endpoints. The Countdown API provides functionalities for searching items, retrieving product details, accessing customer reviews, obtaining seller data, exploring deals, and generating item suggestions. To accomplish this, the project will utilize Postman, a popular API testing tool that allows for efficient testing, automation, and validation of API endpoints. The testing approach will involve API chaining, multiple assertions, and data-driven testing techniques to ensure comprehensive coverage and robust validation of the Countdown API.
 
 ## Features
 
